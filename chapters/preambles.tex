@@ -1,0 +1,329 @@
+%\usepackage{caption}
+%\usepackage{subcaption}
+
+% Diagram tikz
+\usepackage{tikz-cd}
+
+% Color
+\usepackage{color}
+
+% Mengatur bahasa latex
+\usepackage[indonesian]{babel}
+\usepackage[utf8]{inputenc}
+
+% Untuk pengaturan spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Untuk mengatur level section 
+\setcounter{secnumdepth}{6}
+
+% Digunakan untuk memasukan gambar ke laporan. 
+\usepackage{graphicx}
+\graphicspath{{gambar/}}
+\usepackage{float}
+\usepackage[hang,centerlast, nooneline ,small,md]{subfigure}
+\usepackage[subfigure]{tocloft}
+
+% Untuk mengatur spacing antara paragraf
+\usepackage{parskip}
+
+% Membuat indent
+\usepackage{indentfirst}
+\setlength\parindent{1cm}
+
+% Untuk mengkustomisasi margin
+\usepackage{scrextend}
+
+% Untuk mengatur header dan footer
+\usepackage{fancyhdr}
+
+% Membuat seluruh tulisan menjadi Times New Roman. 
+% \usepackage{pslatex}
+
+% Merubah numbering chapter dan section untuk judul setiap bab menggunakan romawi dan judul anak bab menggunakan arabic
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}\hspace{0.05cm}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}\hspace{-0.25cm}}
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}.\hspace{-0,25cm}}
+\renewcommand{\theparagraph}{\arabic{paragraph}.\hspace{-0,25cm}}
+
+% Mengatur identasi judul section dan subsection
+%\titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}
+%\titleformat{\subsection}[block]{\hspace{2em}}{\thesubsection}{1em}{}
+
+% Merubah huruf kapital pada judul daftar isi, daftar gambar, dan daftar table
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\hfil\large\bfseries\MakeUppercase}
+\renewcommand{\cftloftitlefont}{\hfil\large\bfseries\MakeUppercase}
+\renewcommand{\cftlottitlefont}{\hfil\large\bfseries\MakeUppercase}
+
+\renewcommand\cftchappresnum{BAB }
+\renewcommand\cftchapaftersnum{}
+\newlength\mylen
+\settowidth\mylen{\bfseries BAB 1 :\ } % if more than 9 chapters, use "Chapter 10"
+\cftsetindents{chap}{0pt}{\mylen}
+
+% Mengatur font section
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{14}\selectfont}
+\subsectionfont{\fontsize{12}{14}\selectfont}
+\subsubsectionfont{\fontsize{12}{14}\selectfont}
+\paragraphfont{\normalfont\fontsize{12}{14}\selectfont}
+
+% Untuk merupakan format penulisan BAB
+\usepackage{titlesec}
+%\titleformat*{\paragraph}{\normalfont\fontsize{12}{14}\selectfont}
+
+\titleformat{\chapter}
+{\doublespacing\fontsize{14pt}{16pt}\bfseries}
+{\MakeUppercase{\chaptertitlename\ \Roman{chapter}}\filcenter}
+{0.15cm}{\centering\uppercase}
+\titlespacing*{\chapter}{0pt}{-1cm}{20pt}
+
+% Mengatur spacing section
+\titlespacing*{\section}
+{0pt}{10pt}{0cm}
+\titlespacing*{\subsection}
+{0pt}{10pt}{0cm}
+\titlespacing*{\subsubsection}
+{0pt}{10pt}{0cm}
+\titlespacing*{\paragraph}
+{0pt}{10pt}{0cm}
+
+% Digunakan untuk mengatur caption dalam dokumen.
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+
+% Untuk menghapus titik dua (colon)
+\captionsetup[figure]{labelsep=space}
+\captionsetup[table]{labelsep=space}
+
+% Mengatur nomor caption gambar
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+% Mengatur nomor caption table
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+% Mengatur Hyphenation pada latex
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Untuk mengatur setting indent
+\setlength\parindent{1cm}
+
+% Untuk memasukkan table
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Untuk mengatur width
+\usepackage{changepage}
+
+% Menggatur setting halaman 
+\usepackage{geometry}
+\geometry{
+    left=3cm,            % <-- you want to adjust this
+    top=3cm,
+    right=2.5cm,
+    bottom=3cm,
+}
+
+% Teks testing
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+% Untuk mengatur subscript supscript
+\usepackage{fixltx2e}
+
+% Untuk formatting quote pada halaman motto
+\usepackage{epigraph}
+
+% Untuk mengatur wrap picture
+\usepackage{wrapfig}
+
+% Untuk notasi matematika
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+
+
+
+% untuk mengatur label nomor pada rumus
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+% Untuk mengatur spacing daftar gambar
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+
+%Menambahkan sumber gambar
+\usepackage{url}
+\newcommand*{\putsource}[1]{%
+	\textbf{\small{Sumber: }} \small{\url{#1}}
+}
+
+%untuk mengatur package include table in excel
+% \usepackage{pgfplotstable}
+
+% untuk mengatur landscape page
+\usepackage{rotating}
+
+%untuk mengubah page menjadi landscape
+\usepackage{pdflscape}
+
+% untuk list
+\usepackage{enumitem}
+\newenvironment{packed_enum}{
+    \begin{enumerate}[leftmargin=1.5\parindent]
+        \setlength{\itemsep}{0pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\parsep}{0pt}
+        }{\end{enumerate}}
+
+\newenvironment{packed_item}{
+    \begin{itemize}[leftmargin=1.5\parindent]
+        \setlength{\itemsep}{0pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\parsep}{0pt}
+        }{\end{itemize}}
+
+%paket untuk bibTex
+\usepackage{cite}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{apalike}
+
+%paket untuk mengembed kode dalam LaTeX
+\usepackage{listings}
+\lstset{
+    basicstyle=\small,
+    %basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+}
+
+%paket untuk tabel
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+%paket untuk url
+\usepackage{varioref}
+% \usepackage{hyperref}
+\usepackage[hidelinks]{hyperref} %remove red boxes
+\usepackage{cleveref}
+
+% styling python
+\usepackage{color}
+\usepackage{listings}    
+\usepackage{courier}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+%styling Processing
+\usepackage{verbatim}
+
+%Define Colors
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{gray}{RGB}{102,102,102}		%#666666
+\definecolor{function}{RGB}{0,102,153}		%#006699 lightblue
+\definecolor{lightgreen}{RGB}{102,153,0}	%#669900
+\definecolor{bluegreen}{RGB}{51,153,126}	%#33997e
+\definecolor{magenta}{RGB}{217,74,122}	%#d94a7a
+\definecolor{orange}{RGB}{226,102,26}		%#e2661a
+\definecolor{purple}{RGB}{125,71,147}		%#7d4793
+\definecolor{green}{RGB}{113,138,98}		%#718a62
+
+\lstdefinelanguage{Processing}{
+	%keyword1&2&6
+	morekeywords = [3]{abstract, break, class, continue, default, enum, extends, false, final, finally, implements, import, instanceof, interface, native, new, null, package, private, protected, public, static, strictfp, throws, transient, true, void, volatile, length, assert, case, return, super, this, throw},
+	%keyword3
+	morekeywords = [4]{catch, do, for, if, else, switch, synchronized, while, try},
+	%keyword4
+	morekeywords = [5]{width, height, pixelHeight, displayHeight, displayWidth, focused, frameCount, frameRate, key, keyCode, keyPressed, mouseButton, mousePressed, mouseX, mouseY, pixels, pixelWidth, pmouseX, pmouseY},
+	%keyword5
+	morekeywords = [6]{Array, ArrayList, Boolean, Byte, BufferedReader, Character, Class, Double, Float, Integer, HashMap, PrintWriter, String, StringBuffer, StringBuilder, Thread, boolean, byte, char, color, double, float, int, long, short, FloatDict, FloatList, IntDict, IntList, JSONArray, JSONObject, PFont, PGraphics, PImage, PShader, PShape, PVector, StringDict, StringList, Table, TableRow, XML},
+	%literal2
+	morekeywords = [7]{ADD, ALIGN_CENTER, ALIGN_LEFT, ALIGN_RIGHT, ALPHA, ALPHA_MASK, ALT, AMBIENT, ARC, ARROW, ARGB, BACKSPACE, BASELINE, BEVEL, BLEND, BLUE_MASK, BLUR, BOTTOM, BOX, BURN, CENTER, CHATTER, CHORD, CLAMP, CLICK, CLOSE, CMYK, CODED, COMPLAINT, COMPOSITE, COMPONENT, CONCAVE_POLYGON, CONTROL, CONVEX_POLYGON, CORNER, CORNERS, CROSS, CUSTOM, DARKEST, DEGREES, DEG_TO_RAD, DELETE, DIAMETER, DIFFERENCE, DIFFUSE, DILATE, DIRECTIONAL, DISABLE_ACCURATE_2D, DISABLE_DEPTH_MASK, DISABLE_DEPTH_SORT, DISABLE_DEPTH_TEST, DISABLE_NATIVE_FONTS, DISABLE_OPENGL_ERRORS, DISABLE_PURE_STROKE, DISABLE_TEXTURE_MIPMAPS, DISABLE_TRANSFORM_CACHE, DISABLE_STROKE_PERSPECTIVE, DISABLED, DODGE, DOWN, DRAG, DXF, ELLIPSE, ENABLE_ACCURATE_2D, ENABLE_DEPTH_MASK, ENABLE_DEPTH_SORT, ENABLE_DEPTH_TEST, ENABLE_NATIVE_FONTS, ENABLE_OPENGL_ERRORS, ENABLE_PURE_STROKE, ENABLE_TEXTURE_MIPMAPS, ENABLE_TRANSFORM_CACHE, ENABLE_STROKE_PERSPECTIVE, ENTER, EPSILON, ERODE, ESC, EXCLUSION, EXIT, FX2D, GIF, GRAY, GREEN_MASK, GROUP, HALF, HALF_PI, HAND, HARD_LIGHT, HINT_COUNT, HSB, IMAGE, INVERT, JAVA2D, JPEG, LEFT, LIGHTEST, LINE, LINES, LINUX, MACOSX, MAX_FLOAT, MAX_INT, MIN_FOAT, MIN_INT, MITER, MODEL, MOVE, MULTIPLY, NORMAL, NORMALIZED, NO_DEPTH_TEST, NTSC, ONE, OPAQUE, OPEN, ORTHOGRAPHIC, OVERLAY, PAL, PDF, P2D, P3D, PERSPECTIVE, PI, PIE, PIXEL_CENTER, POINT, POINTS, POSTERIZE, PRESS, PROBLEM, PROJECT, QUAD, QUAD_STRIP, QUADS, QUARTER_PI, RAD_TO_DEG, RADIUS, RADIANS, RECT, RED_MASK, RELEASE, REPEAT, REPLACE, RETURN, RGB, RIGHT, ROUND, SCREEN, SECAM, SHAPE, SHIFT, SPAN, SPECULAR, SPHERE, SOFT_LIGHT, SQUARE, SUBTRACT, SVG, SVIDEO, TAB, TARGA, TAU, TEXT, TFF, THIRD_PI, THRESHOLD, TIFF, TOP, TRIANGLE, TRIANGLE_FAN, TRIANGLES, TRIANGLE_STRIP, TUNER, TWO, TWO_PI, UP, WAIT, WHITESPACE},
+	%function1
+	morekeywords = [8]{start, stop, breakShape, createPath, loadMatrix, parseBoolean, parseByte, parseChar, parseFloat, parseInt, saveFile, savePath, sketchFile, sketchPath, abs, acos, alpha, ambient, ambientLight, append, applyMatrix, arc, arrayCopy, asin, atan, atan2, background, beginCamera, beginContour, beginRaw, beginRecord, beginShape, bezier, bezierDetail, bezierPoint, bezierTangent, bezierVertex, binary, blend, blendColor, blendMode, blue, box, brightness, camera, ceil, circle, clear, clip, color, colorMode, concat, constrain, copy, cos, createFont, createGraphics, createImage, createInput, createOutput, createReader, createShape, createWriter, cursor, curve, curveDetail, curvePoint, curveTangent, curveTightness, curveVertex, day, degrees, delay, directionalLight, displayDensity, dist, ellipse, ellipseMode, emissive, endCamera, endContour, endRaw, endRecord, endShape, exit, exp, expand, fill, filter, floor, frustum, fullScreen, get, green, hex, hint, hour, hue, image, imageMode, join, launch, lerp, lerpColor, lightFalloff, lights, lightSpecular, line, loadBytes, loadFont, loadImage, loadJSONArray, loadJSONObject, loadPixels, loadShader, loadShape, loadStrings, loadTable, loadXML, log, loop, mag, map, match, matchAll, max, millis, min, minute, modelX, modelY, modelZ, month, nf, nfc, nfp, nfs, noClip, noCursor, noFill, noise, noiseDetail, noiseSeed, noLights, noLoop, norm, normal, noSmooth, noStroke, noTint, ortho, parseJSONArray, parseJSONObject, parseXML, perspective, list, pixelDensity, point, pointLight, popMatrix, popStyle, pow, print, printArray, printCamera, println, printMatrix, printProjection, pushMatrix, pushStyle, quad, quadraticVertex, radians, random, randomGaussian, randomSeed, rect, rectMode, red, redraw, requestImage, resetMatrix, resetShader, reverse, rotate, rotateX, rotateY, rotateZ, round, saturation, save, saveBytes, saveFrame, saveJSONArray, saveJSONObject, saveStream, saveStrings, saveTable, saveXML, scale, screenX, screenY, screenZ, second, selectFolder, selectInput, selectOutput, set, shader, shape, shapeMode, shearX, shearY, shininess, shorten, sin, size, smooth, sort, specular, sphere, sphereDetail, splice, split, splitTokens, spotLight, sq, sqrt, square, stroke, strokeCap, strokeJoin, strokeWeight, subset, tan, text, textAlign, textAscent, textDescent, textFont, textLeading, textMode, textSize, texture, textureMode, textureWrap, textWidth, thread, tint, translate, triangle, trim, unbinary, unhex, updatePixels, vertex, year},
+	%function2
+	morekeywords = [9]{cache, readLine, close, flush, print, println, charAt, equals, indexOf, substring, toLowerCase, toUpperCase, getDouble, getLong, getColumnTitles, getColumnTypes, getColumnType, setDouble, setLong, add, clear, div, get, hasKey, keyArray, keys, mult, remove, set, size, sortKeys, sortKeysReverse, sortValues, sortValuesReverse, sub, valueArray, values, append, array, hasValue, max, min, mult, remove, reverse, shuffle, sort, sortReverse, increment, getBoolean, getFloat, getInt, getIntArray, getJSONArray, getJSONObject, getString, getStringArray, isNull, setBoolean, setFloat, setInt, setJSONArray, setJSONObject, setString, beginDraw, endDraw, blend, copy, filter, loadPixels, mask, resize, save, updatePixels, addChild, beginContour, beginShape, disableStyle, enableStyle, endContour, endShape, getChild, getChildCount, getVertex, getVertexCount, isVisible, resetMatrix, rotate, rotateX, rotateY, rotateZ, scale, setFill, setStroke, setVertex, setVisible, translate, angleBetween, cross, dist, dot, fromAngle, heading, lerp, limit, mag, magSq, normalize, random2D, random3D, setMag, lower, upper, addColumn, addRow, clearRows, findRow, findRows, getColumnCount, getRow, getRowCount, getStringColumn, matchRow, matchRows, removeColumn, removeRow, removeTokens, rows, trim, getColumnTitle, format, getAttributeCount, getChildren, getContent, getName, getParent, hasAttribute, hasChildren, listAttributes, listChildren, removeChild, setContent, setName, toString},
+	%function4
+	morekeywords = [10]{draw, keyReleased, keyTyped, mouseClicked, mouseDragged, mouseMoved, mouseReleased, mouseWheel, settings, setup},
+	keywordstyle = [3]\color{bluegreen},
+	keywordstyle = [4]\color{lightgreen},
+	keywordstyle = [5]\color{magenta},
+	keywordstyle = [6]\color{orange},
+	keywordstyle = [7]\color{green},
+	keywordstyle = [8]\color{function},
+	keywordstyle = [9]\color{function},
+	keywordstyle = [10]\color{function}\bfseries,
+	sensitive = true,
+	morecomment = [l][\color{gray}]{//},
+	morecomment = [s][\color{gray}]{/*}{*/},
+	morecomment = [s][\color{gray}]{/**}{*/},
+	morestring = [b][\color{purple}]",
+	morestring = [b][\color{purple}]'
+}
+\renewcommand{\ttdefault}{pcr}
+\lstset{
+	language={Processing},
+	basicstyle={\small\ttfamily},
+	identifierstyle={\small},
+	commentstyle={\small\itshape},
+	keywordstyle={\small},
+	ndkeywordstyle={\small},
+	stringstyle={\small\ttfamily},
+	frame={tb},
+	breaklines=true,
+	columns=[l]{fullflexible},
+	numbers=left,
+	xrightmargin=0em,
+	xleftmargin=3em,
+	numberstyle={\scriptsize},
+	stepnumber=1,
+	numbersep=1em,
+	lineskip=-0.5ex,
+}
+
+%listing style
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{custom}{
+	frame = single,
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=6pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=custom}
