@@ -1,4 +1,4 @@
-Template Laporan PA
+Template LaTex Laporan PA
 Departemen Teknik Elektro dan Informatika
 Sekolah Vokasi UGM
 Dikembangkan oleh Dr. Fahmizal, S.T., M.Sc. dan Tim
